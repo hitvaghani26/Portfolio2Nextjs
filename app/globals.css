@@ -1,26 +1,139 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-retail: 'RetailVariable', sans-serif;
+  --font-swear-display: 'SwearDisplay', serif;
+  --font-swear-text: 'SwearText', serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'RetailVariable';
+  src: url('./assets/font/fonnts.com-Retail_Variable.otf') format('opentype');
+  font-weight: 100 900;
+  /* Assuming it supports weights from Thin (100) to Black (900) */
+  font-style: normal;
+  /* Adjust this if the font has italic styles */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('./assets/font/fonnts.com-Swear-Display-.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('./assets/font/fonnts.com-Swear-Display-Black.otf')
+    format('opentype');
+  font-weight: 900;
+  /* Black */
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('./assets/font/fonnts.com-Swear-Display-Light.otf')
+    format('opentype');
+  font-weight: 300;
+  /* Light */
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('./assets/font/fonnts.com-Swear-Display-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+  /* Medium */
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('./assets/font/fonnts.com-Swear-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+  /* Thin */
+}
+
+@font-face {
+  font-family: 'SwearText';
+  src: url('./assets/font/fonnts.com-Swear-Text-.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SwearText';
+  src: url('./assets/font/fonnts.com-Swear-Text-Black.otf') format('opentype');
+  font-weight: 900;
+  /* Black */
+}
+
+@font-face {
+  font-family: 'SwearText';
+  src: url('./assets/font/fonnts.com-Swear-Text-Light.otf') format('opentype');
+  font-weight: 300;
+  /* Light */
+}
+
+@font-face {
+  font-family: 'SwearText';
+  src: url('./assets/font/fonnts.com-Swear-Text-Medium.otf') format('opentype');
+  font-weight: 500;
+  /* Medium */
+}
+
+@font-face {
+  font-family: 'SwearText';
+  src: url('./assets/font/fonnts.com-Swear-Text-Thin.otf') format('opentype');
+  font-weight: 100;
+  /* Thin */
+}
+
+.rounde1 {
+  width: 180vmin;
+  height: 180vmin;
+  border: 2px solid rgba(0, 0, 0, 0.116);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.rounde2 {
+  width: 176vmin;
+  height: 176vmin;
+  border: 2px solid rgba(0, 0, 0, 0.116);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.rounde3 {
+  width: 172vmin;
+  height: 172vmin;
+  border: 2px solid rgba(0, 0, 0, 0.116);
+  border-radius: 50%;
+  padding: 5%;
+  z-index: -1;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: var(--after-opacity, 0);
+  transition: opacity 0.1s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
 }
+

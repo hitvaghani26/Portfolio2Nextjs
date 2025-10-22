@@ -1,0 +1,28 @@
+export { default as CSS3 } from './CSS3.png'; 
+export { default as gsapGreensock } from './gsap-greensock.png'; 
+export { default as demo } from './demo.png';
+export { default as Express } from './Express.png';
+export { default as Git } from './Git.png';
+export { default as GitHub } from './GitHub.png';
+export { default as GraphQL } from './GraphQL.png';
+export { default as HTML5 } from './HTML5.png';
+export { default as JavaScript } from './JavaScript.png';
+export { default as MongoDB } from './MongoDB.png';
+export { default as Nextjs } from './Next.js.png';
+export { default as NGINX } from './NGINX.png';
+export { default as Nodejs } from './Node.js.png';
+export { default as React } from './React.png';
+export { default as Sass } from './Sass.png';
+export { default as Swagger } from './Swagger.png';
+export { default as TypeScript } from './TypeScript.png';
+export { default as VSCode } from './Visual Studio Code (VS Code).png';
+export { default as Vite } from './Vite.js.png';
+export { default as Webpack } from './Webpack.png';
+export { default as Docker } from './Docker.png';
+export { default as  thumbnail1} from './thumbnail1.png';
+export { default as  thumbnail2} from './thumbnail2.png';
+export { default as  thumbnail3} from './thumbnail3.png';
+export { default as  thumbnail4} from './thumbnail4.png';
+export { default as  thumbnail5} from './thumbnail5.png';
+export { default as  thumbnail6} from './thumbnail6.png';
+
