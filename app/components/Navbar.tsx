@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { BsGithub, BsLinkedin, BsTwitterX, BsInstagram } from 'react-icons/bs';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
@@ -43,7 +42,7 @@ const Navbar = () => {
             scrolled ? 'bg-white/50' : ''
           }`}
         >
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}

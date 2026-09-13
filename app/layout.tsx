@@ -1,11 +1,14 @@
 
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
+import { PortfolioNav } from './components/PortfolioNav';
+import { PortfolioFooter } from './components/PortfolioFooter';
 
 export const metadata: Metadata = {
-  title: "Hit Vaghani",
+  metadataBase: new URL('https://hitvaghani.dev'),
+  title: { default: 'Hit Vaghani | Full-stack Developer', template: '%s | Hit Vaghani' },
   description:
-    "Portfolio of Hit Vaghani, a frontend developer specializing in React, TypeScript, and modern web development. Explore projects, skills, and contact details.",
+    "Full-stack developer building React, Next.js, and Node.js applications. Explore production engineering, client websites, and creative frontend work. Based in India, interested in freelance projects and German software teams.",
   keywords:
     "Frontend Developer, Fullstack Developer, React, TypeScript, JavaScript, Portfolio, Web Development",
   authors: [{ name: "Hit Vaghani" }],
@@ -31,7 +34,9 @@ export default function RootLayout({
       <body
        
       >
+        <PortfolioNav />
         {children}
+        <PortfolioFooter />
       </body>
     </html>
   );
