@@ -5,9 +5,9 @@ import type { Metadata, Viewport } from "next";
 export const metadata: Metadata = {
   title: "Hit Vaghani",
   description:
-    "Portfolio of Hit Vaghani, a frontend developer specializing in React, TypeScript, and modern web development. Explore projects, skills, and contact details.",
+    "Hit Vaghani is a full-stack software engineer working with React, Next.js, Node.js, NestJS, PostgreSQL, and MongoDB. Explore selected project contributions.",
   keywords:
-    "Frontend Developer, Fullstack Developer, React, TypeScript, JavaScript, Portfolio, Web Development",
+    "Hit Vaghani, Full-Stack Software Engineer, React, Next.js, TypeScript, Node.js, NestJS, PostgreSQL, MongoDB, Portfolio",
   authors: [{ name: "Hit Vaghani" }],
   icons: {
     icon: "/icon.jpg",

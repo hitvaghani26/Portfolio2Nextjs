@@ -50,13 +50,20 @@ const HeroSection = () => {
           <span className="font-retail">Hit Vaghani</span>
           <br />
           <span className="font-swear-display font-extralight">a</span>{' '}
-          <span className="font-retail">Full-Stack Developer</span>
+          <span className="font-retail">Full-Stack Engineer</span>
           <br />
           <span className="font-swear-display font-extralight">
             who loves
           </span>{' '}
           <span className="font-retail">modern web & tea</span>
         </h1>
+        <p className="mt-7 max-w-2xl font-retail text-sm leading-relaxed text-gray-600 sm:text-base md:text-lg">
+          I build with React, Next.js and Node.js. Recently, that’s meant healthcare booking,
+          lab tools, and integrations between systems.
+        </p>
+        <a href="#projects" className="mt-8 inline-flex items-center gap-3 rounded-full bg-black px-6 py-3 font-retail text-sm text-white transition-colors hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black">
+          Explore my work <span aria-hidden="true">↘</span>
+        </a>
       </div>
     </div>
   );

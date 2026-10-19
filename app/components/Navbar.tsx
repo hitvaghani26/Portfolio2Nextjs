@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { BsGithub, BsLinkedin, BsTwitterX, BsInstagram } from 'react-icons/bs';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
@@ -18,6 +17,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Showcase', href: '#showcase' },
@@ -43,7 +43,7 @@ const Navbar = () => {
             scrolled ? 'bg-white/50' : ''
           }`}
         >
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
@@ -65,6 +65,8 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="p-4 rounded-full bg-white/40 backdrop-blur-xl shadow-2xl border border-white/30 text-gray-800 hover:bg-black hover:text-white transition-all duration-300"
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <HiX className="text-2xl" /> : <HiMenuAlt3 className="text-2xl" />}
         </button>
@@ -72,6 +74,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-navigation"
+        inert={!isOpen}
         className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ${
           isOpen ? 'pointer-events-auto' : 'pointer-events-none'
         }`}
